@@ -1,8 +1,5 @@
 const express=require('express');
 const catchAsync = require('../utils/catchAsync');
-// const ExpressError=require('../utils/ExpressError');
-// const Campground=require('../models/campground')
-// const {campgroundSchema}=require('../schemas.js')
 const {isLoggedIn,isAuthor,validateCampground}=require('../middleware')
 const multer=require('multer')
 const {storage}=require('../cloudinary')
@@ -11,7 +8,7 @@ const upload=multer({storage})
 const campgrounds=require(('../controllers/campgrounds'))
 const router=express.Router();
 
-//upload.array('image'),
+
 
 router.route('/')
 .get(catchAsync(campgrounds.index))

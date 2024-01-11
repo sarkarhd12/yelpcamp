@@ -5,8 +5,6 @@ const Campground=require('../models/campground')
 
 mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp',{
     useNewUrlparser:true,
-    // useCreateIndex:true,
-    // uneUnifiedTopology:true
 })
 const db=mongoose.connection;
 db.on("error",console.error.bind(console,"connection error"));
